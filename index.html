@@ -19,24 +19,28 @@
       font-family:'Outfit', sans-serif;
 ;
     }
-    /* .attribution { 
-      font-size: 11px; 
+    .attribution { 
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      font-size: 0.688rem;
       text-align: center;
-       
     }
     .attribution a { 
       color: hsl(228, 45%, 44%); 
-    } */
+    }
     body {
       background-color: hsl(217, 54%, 11%);
       height: 100vh;
       display: flex;
-      align-items:center;    
+      align-items:center;
+      justify-content: center;    
     }
     .container{
       width: 300px;
       height: 523px;
-      margin: auto;
+      margin: 0.938rem;
       background-color: hsl(216, 50%, 16%);
       padding: 1.2rem;
       border-radius: 1rem;
@@ -47,9 +51,10 @@
     }
     .title{
       color: hsl(0, 0%, 100%);
-      margin: 1rem 0rem;
-      font-weight: 600px;
+      font-weight: 600;
       cursor: pointer;
+      text-decoration: none;
+      font-size: 1.8rem;
     }
     .title:hover{
       color: hsl(178, 100%, 50%);
@@ -57,8 +62,9 @@
     .subtitle{
       color: hsl(215, 51%, 70%);
       font-weight: 400;
-      font-size: 18px;
+      font-size: 1.125rem;
       margin-bottom: 1rem;
+      margin-top: 1rem;
     }
     .split_box{
       display: flex;
@@ -79,45 +85,31 @@
       justify-content: space-between;
       color: hsl(215, 51%, 70%);
     }
-    /* .price{
-      color: hsl(178, 100%, 50%);
-      font-size: 18px;
-    }
-    .price > img{
-      margin-right: 0.5rem;
-    }
-    .time{
-      float: right;
-      color: hsl(215, 51%, 70%);
-    }
-    .time > img {
-      margin-right: 0.5rem;
-    } */
     hr{
-      /* border-color: hsl(215, 32%, 27%); */
       margin: 1rem 0rem;
       height: 1px;
       border: 0; 
       border-top: 1px solid hsl(215, 32%, 27%);
     }
-    .comment{
+    .bottom{
       color: hsl(215, 51%, 70%);
       display: flex;
-      font-size: 18px;
+      font-size: 1.125rem;
       align-items: center;
     }
-    .comment > img{
+    .bottom > img{
       width: 35px;
       height: 35px;
       border: 1px white solid;
       border-radius: 2rem;
       margin-right:1rem;
     }
-    .comment > p > span {
+    .bottom > p > a {
       color: white;
       cursor: pointer;
+      text-decoration: none;
     }
-    .comment > p > span:hover {
+    .bottom > p > a:hover {
       color: hsl(178, 100%, 50%);
     }
     .image{
@@ -126,6 +118,7 @@
       border-radius:1rem;
       cursor: pointer;
       position: relative;
+      margin-bottom: 1rem;
     }
     .image:hover > .view_icon{
       opacity: 1;
@@ -146,25 +139,24 @@
   </style>
 </head>
 <body>
-<div class="container">
+<main class="container">
   <div class="image">
     <div class="back_hover"></div>
     <img src="images/icon-view.svg" height="45px" width="45px" class="view_icon">
-  <img class="main_img" src="images/image-equilibrium.jpg" alt="">
+    <img class="main_img" src="images/image-equilibrium.jpg" alt="image equilibrium">
   </div>
-  <h2 class="title">Equilibrium #3429</h2>
-
+  <a href="" class="title">Equilibrium #3429</a>
   <p class="subtitle">Our Equilibrium collection promotes balance and calm.</p>
   <div class="split_box">
-    <div class="price"> <img src="images/icon-ethereum.svg" alt=""> <p>0.041 ETH</p> </div>
-    <div class="time"> <img src="images/icon-clock.svg" alt=""> <p>3 days left</p> </div>
+    <div class="price"> <img src="images/icon-ethereum.svg" alt="ethereum icon"> <p>0.041 ETH</p> </div>
+    <div class="time"> <img src="images/icon-clock.svg" alt="clock icon"> <p>3 days left</p> </div>
   </div>
   <hr>
-  <div class="comment"> <img src="images/image-avatar.png" alt=""> <p>Creation of <span>Jules Wyvern</span></p></div>
-</div>
-  <!-- <div class="attribution">
+  <div class="bottom"> <img src="images/image-avatar.png" alt="avatar image"> <p>Creation of <a href="">Jules Wyvern</a></p></div>
+</main>
+ <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+ </footer>
 </body>
 </html>
