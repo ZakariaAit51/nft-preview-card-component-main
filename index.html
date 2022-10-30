@@ -5,29 +5,166 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      padding: 0;
+      margin: 0;
+      font-family:'Outfit', sans-serif;
+;
+    }
+    /* .attribution { 
+      font-size: 11px; 
+      text-align: center;
+       
+    }
+    .attribution a { 
+      color: hsl(228, 45%, 44%); 
+    } */
+    body {
+      background-color: hsl(217, 54%, 11%);
+      height: 100vh;
+      display: flex;
+      align-items:center;    
+    }
+    .container{
+      width: 300px;
+      height: 523px;
+      margin: auto;
+      background-color: hsl(216, 50%, 16%);
+      padding: 1.2rem;
+      border-radius: 1rem;
+    }
+    .main_img{
+      width: 100%;
+      border-radius: 1rem;
+    }
+    .title{
+      color: hsl(0, 0%, 100%);
+      margin: 1rem 0rem;
+      font-weight: 600px;
+      cursor: pointer;
+    }
+    .title:hover{
+      color: hsl(178, 100%, 50%);
+    }
+    .subtitle{
+      color: hsl(215, 51%, 70%);
+      font-weight: 400;
+      font-size: 18px;
+      margin-bottom: 1rem;
+    }
+    .split_box{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .price{
+      display: flex;
+      flex-direction: row;
+      width: 31%;
+      justify-content: space-between;
+      color: hsl(178, 100%, 50%);
+    }
+    .time{
+      display: flex;
+      flex-direction: row;
+      width: 31%;
+      justify-content: space-between;
+      color: hsl(215, 51%, 70%);
+    }
+    /* .price{
+      color: hsl(178, 100%, 50%);
+      font-size: 18px;
+    }
+    .price > img{
+      margin-right: 0.5rem;
+    }
+    .time{
+      float: right;
+      color: hsl(215, 51%, 70%);
+    }
+    .time > img {
+      margin-right: 0.5rem;
+    } */
+    hr{
+      /* border-color: hsl(215, 32%, 27%); */
+      margin: 1rem 0rem;
+      height: 1px;
+      border: 0; 
+      border-top: 1px solid hsl(215, 32%, 27%);
+    }
+    .comment{
+      color: hsl(215, 51%, 70%);
+      display: flex;
+      font-size: 18px;
+      align-items: center;
+    }
+    .comment > img{
+      width: 35px;
+      height: 35px;
+      border: 1px white solid;
+      border-radius: 2rem;
+      margin-right:1rem;
+    }
+    .comment > p > span {
+      color: white;
+      cursor: pointer;
+    }
+    .comment > p > span:hover {
+      color: hsl(178, 100%, 50%);
+    }
+    .image{
+      display: flex;
+      align-items: center;
+      border-radius:1rem;
+      cursor: pointer;
+      position: relative;
+    }
+    .image:hover > .view_icon{
+      opacity: 1;
+    }
+    .view_icon{
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%,0);
+      opacity: 0;
+    }
+    .image:hover > .back_hover{
+      border-radius: 1rem;
+      position: absolute;
+      background-color: hsla(178, 100%, 50%, 0.60);
+      height: 100%;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
+<div class="container">
+  <div class="image">
+    <div class="back_hover"></div>
+    <img src="images/icon-view.svg" height="45px" width="45px" class="view_icon">
+  <img class="main_img" src="images/image-equilibrium.jpg" alt="">
+  </div>
+  <h2 class="title">Equilibrium #3429</h2>
 
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
+  <p class="subtitle">Our Equilibrium collection promotes balance and calm.</p>
+  <div class="split_box">
+    <div class="price"> <img src="images/icon-ethereum.svg" alt=""> <p>0.041 ETH</p> </div>
+    <div class="time"> <img src="images/icon-clock.svg" alt=""> <p>3 days left</p> </div>
+  </div>
+  <hr>
+  <div class="comment"> <img src="images/image-avatar.png" alt=""> <p>Creation of <span>Jules Wyvern</span></p></div>
+</div>
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
